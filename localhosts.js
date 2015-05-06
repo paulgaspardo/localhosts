@@ -2,7 +2,7 @@ var http = require('http');
 var httpProxy = require('http-proxy');
 var fs = require('fs');
 var LineByLineReader = require('line-by-line');
-var express = require('express');
+var serveStatic = require('serve-static');
 
 var proxy = httpProxy.createProxyServer({});
 
@@ -37,7 +37,7 @@ function loadHosts() {
       var target = match[3];
       if (type.toLowerCase() == 'static') {
         console.log('Static ' + host + ' => ' + target);
-        var static = express.static(target);
+        var static = serveStatic(target);
         newTargets[host] = function (req, res) {
           static(req, res, function () {
             res.writeHead(404);
