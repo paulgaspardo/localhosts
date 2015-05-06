@@ -1,0 +1,19 @@
+{
+  "name": "localhosts",
+  "version": "0.1.0",
+  "description": "Localhost development proxy configured by /etc/hosts",
+  "main": "localhosts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "http-proxy": "1.11.1",
+    "line-by-line": "0.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulgaspardo/localhosts"
+  },
+  "author": "Paul Gaspardo <paul@paulgaspardo.com>",
+  "license": "ISC"
+}
